@@ -3,6 +3,10 @@
 // convenience to get you started writing code faster.
 //
 
-export const gigasecond = () => {
-  throw new Error('Remove this statement and implement this function');
-};
+const oneGigasecond = 1000000000;
+
+export function gigasecond(date) {
+  // JS timestamps are in miliseconds
+  const newTimestamp = date.getTime() + oneGigasecond * 1000;
+  return new Date(newTimestamp);
+}
